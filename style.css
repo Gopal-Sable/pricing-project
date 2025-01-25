@@ -179,7 +179,7 @@ justify-content: center;
 }
 
 input:checked + .slider {
-  background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));#2196F3;
+  background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
 }
 
 input:focus + .slider {
