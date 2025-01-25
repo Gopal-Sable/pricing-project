@@ -64,6 +64,13 @@ button{
     font-weight:300;
     background:linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
 }
+button:hover{
+  cursor: pointer;
+}
+.active-card{
+    background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color: white;
+}
 .active-card{
     background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
     color: white;
@@ -72,6 +79,13 @@ button{
     background: white;
     color: hsl(237, 63%, 64%);
 }
+.active-card>button:hover{
+  cursor: pointer;
+  background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+  border: 1px solid  white;
+  color: white
+}
+
 header{
 width: 100vw;
 display: flex;
