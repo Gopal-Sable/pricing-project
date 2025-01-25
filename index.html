@@ -1,35 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Pricing component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
-  </body>
+  <title>Pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <p class="heading">Our Pricing</p>
+    <div class="subscription">
+      <label for="switch">
+        Annually
+      </label>
+      <label class="switch">
+        <input type="checkbox" id="checkbox" >
+        <span class="slider round"></span>
+      </label>
+      <label for="switch">Monthly</label>
+    </div>
+
+  </header>
+  <div class="card-container">
+
+    <div class="card">
+      <p>
+        Basic
+      </p>
+
+      <h1 class="ammount">
+        <span class="doller">
+          &dollar;
+        </span>
+        <p id="Basic-price">199.99</p>
+      </h1>
+      <hr>
+      <p>
+        500 GB Storage
+      </p>
+      <hr>
+      <p>
+        2 Users Allowed
+      </p>
+      <hr>
+      <p>
+        Send up to 3 GB
+      </p>
+      <hr>
+      <button>Learn More</button>
+    </div>
+    <div class="card active-card">
+      <p class="plans">
+        Professional
+      </p>
+
+      <h1 class="ammount" id="Professional-price"> <span class="doller">
+          &dollar;
+        </span>
+        <p id="Pro-price">249.99</p>
+      </h1>
+      <hr>
+      <p>
+        1 TB Storage
+      </p>
+      <hr>
+      <p>
+        5 Users Allowed
+      </p>
+      <hr>
+      <p>
+        Send up to 10 GB
+      </p>
+      <hr>
+      <button>Learn More</button>
+    </div>
+    <div class="card">
+      <p>
+        Master
+      </p>
+
+      <h1 class="ammount"> <span class="doller">
+          &dollar;
+        </span>
+        <p id="Master-price">399.99</p>
+      </h1>
+      <hr>
+      <p>
+        2 TB Storage
+      </p>
+      <hr>
+      <p>
+        10 Users Allowed
+      </p>
+      <hr>
+      <p>
+        Send up to 20 GB
+      </p>
+      <hr>
+      <button>Learn More</button>
+    </div>
+  </div>
+</body>
+<script>
+  let checkbox= document.getElementById("checkbox");
+  let Master=document.getElementById("Master-price");
+  let pro=document.getElementById("Pro-price");
+
+  let Basic=document.getElementById("Basic-price");
+  // console.log(Master,pro,Basic);
+  
+  checkbox.onchange=()=>{
+    if (checkbox.checked) {
+      Master.innerText="39.99";
+    pro.innerText="24.99";
+    Basic.innerText="19.99";
+    
+  }else{
+    Master.innerText="399.99";
+    pro.innerText="249.99";
+    Basic.innerText="199.99";
+  }
+  }
+
+</script>
 </html>

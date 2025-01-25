@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,701;1,701&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat;
+    font-size: 15px;
+}
+
+body{
+    background:hsl(240, 78%, 98%);
+    background-image: url(./images/bg-top.svg); 
+    background-position: 215px 0px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    overflow-x: hidden;
+}
+.doller{
+    font-size: 2rem;
+    align-items: center;
+
+}
+.card-container{
+    width: 80%;
+    /* min-width: 250px; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;  
+    row-gap: 30px;
+    margin: 30px 30px;
+    align-items: center;
+}
+.card{
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 2%;
+    width: 300px;
+    color: hsl(233, 13%, 49%);
+    height: 400px;
+    justify-content: space-around;
+}
+
+hr{
+    width: 70%;
+    color: hsl(240, 78%, 98%);
+}
+
+button{
+    border: none;
+    color: white;
+    padding: 12px 0px;
+    text-align: center;
+    width: 80%;
+    text-transform: uppercase;
+    border-radius: 10px;
+    letter-spacing: 0.2rem;
+    font-weight:300;
+    background:linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+}
+.active-card{
+    background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color: white;
+}
+.active-card>button{
+    background: white;
+    color: hsl(237, 63%, 64%);
+}
+header{
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+justify-content: center;
+}
+.heading{
+  font-size: xx-large;
+  font-weight: bolder;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  color: hsl(233, 13%, 49%);
+  margin: 30px 0px;
+}
+.subscription{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+}
+.subscription>label{
+  color: hsl(233, 13%, 49%);
+}
+.ammount{
+  font-weight:bold;
+  color: hsl(233, 13%, 49%);
+  display: flex;
+  align-items: center;
+}
+.ammount>p{
+  font-size: 4rem;
+}
+#Professional-price{
+  color: white;
+}
+
+@media (min-width:425px) and (max-width:1023px) {
+  body{
+    background-position: top right;
+  }
+}
+@media (min-width:1024px) {
+  body{
+    height: 100vh;
+    background-image: url(./images/bg-top.svg),url(./images/bg-bottom.svg); 
+    background-position: top right, bottom left;
+  }
+  .card-container{
+    flex-direction: row;
+    justify-content: center;
+    height: 70vh;
+  }
+  .card{
+    padding: 2rem;
+    width: 360px;
+    height: 80%;
+
+  }
+  .active-card{
+    height: 90%;
+  }
+}
+
+
+/* Toggle button  referd from w3school*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));#2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
